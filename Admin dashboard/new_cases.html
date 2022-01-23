@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"/>
+    <link rel="icon" href="./melody.png" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="./admin_style.css" />
+    <title>Incident Reporting System</title>
+  </head>
+  <body id="body">
+    <div class="container">
+      <nav class="navbar">
+        <div class="nav_icon" onclick="toggleSidebar()">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+        <div class="navbar__left">
+          <a class="active_link" href="#">Admin</a>
+        </div>
+        <div class="navbar__right">
+          <a href="#">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </a>
+          <a href="#">
+            <i class="fa fa-clock-o" aria-hidden="true"></i>
+          </a>
+          <a href="#">
+            <img width="30" src="assets/avatar.svg" alt="" />
+            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+          </a>
+        </div>
+      </nav>
+
+      <main>
+        <div class="main__container">
+          <div class="main__title">
+            <div class="main__greeting">
+                <form method="post" action="new_cases.html">
+                      <div class="input-group">
+                        <label>Reporter Name</label>
+                        <input type="text" name="ReporterName">
+                    </div>
+                    <div class="input-group">
+                        <label>Incident Description</label>
+                        <textarea id="description" name="description" rows="10" cols="100">
+                        </textarea>
+                    </div>
+                    <div class="input-group">
+                        <label>Location</label>
+                        <input type="Location" name="Location">
+                    </div>
+                    <div class="input-group">
+                        <label>Date Reported</label>
+                        <input type="DateReported" name="DateReported">
+                    </div>
+                    <div class="input-group">
+                        <label>Time Reported</label>
+                        <input type="TimeReported" name="TimeReported">
+                    </div>
+                    <div class="input-group">
+                        <label>Status</label>
+                        <input type="status" name="status">
+                    </div>
+                    <div class="input-group">
+                        <button type="submit" class="btn" name="userreportform">Mark as Submitted</button>
+                    </div>
+                </form>
+            </div>
+            </div>
+          </div>
+
+          <!-- MAIN TITLE ENDS HERE -->
+
+
+      </main>
+
+      <div id="sidebar">
+        <div class="sidebar__title">
+          <div class="sidebar__img">
+            <img src="./melody.png" alt="logo" />
+            <h1>II&RS</h1>
+          </div>
+          <i
+            onclick="closeSidebar()"
+            class="fa fa-times"
+            id="sidebarIcon"
+            aria-hidden="true"
+          ></i>
+        </div>
+
+        <div class="sidebar__menu">
+          <div class="sidebar__link active_menu_link">
+            <i class="fa fa-home"></i>
+            <a href="dashboard.html">Dashboard</a>
+          </div>
+          <h2>MANAGEMENT</h2>
+          <div class="sidebar__link">
+            <i class="fa fa-user-secret" aria-hidden="true"></i>
+            <a href="reported_incident.html">Reported Incident</a>
+          </div>
+          <div class="sidebar__link">
+            <i class="fa fa-building-o"></i>
+            <a href="unsolved_cases.html">unsolved Cases</a>
+          </div>
+          <div class="sidebar__link">
+            <i class="fa fa-wrench"></i>
+            <a href="new_cases.html">New Cases</a>
+          </div>
+          <div class="sidebar__link">
+            <i class="fa fa-archive"></i>
+            <a href="solved_cases.html">Solved Cases</a>
+          </div>
+          <div class="sidebar__logout">
+            <i class="fa fa-power-off"></i>
+            <a href="#">Log out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

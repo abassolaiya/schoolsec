@@ -1,0 +1,136 @@
+*{
+	border: 0px;
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+html{
+	font-size: 10px;
+}
+
+body {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-weight: 400;
+	font-size: 1rem;
+	line-height: 1.7;
+	color: #777;
+}
+
+header {
+	height: 100vh;
+	background-image: linear-gradient(
+		to right bottom,
+	rgba(80, 156, 130, 0.4),
+	rgba(91, 102, 133, 0.2)), url(../css/img/background.jpg);
+	background-position: top;
+	background-size: cover;
+	
+}
+.logo{
+height: 100px;
+margin-top: 10px;
+}
+
+.logo:hover{
+animation: moveInRight 1s ease-out;
+}
+
+.text-box{
+	position: absolute;
+	top: 150px;
+	left: 100px;
+	text-align: center;
+}
+
+.heading-primary{
+color: #fff;
+backface-visibility: hidden;
+margin-bottom: 10px;
+text-align: center;
+backface-visibility: hidden;
+padding-right: 4rem;
+}
+.heading-primary-main {
+display: block;
+font-size: 3rem;
+font-weight: 50%;
+letter-spacing: 1rem;
+text-transform: uppercase;
+
+animation-name: moveInLeft;
+animation-duration: 5s;
+}
+.heading-primary-sub {
+display: block;
+font-size: 1.5rem;
+font-weight: 50%;
+letter-spacing: 1rem;
+
+
+animation-name: moveInRight;
+animation-duration: 5s;
+}
+
+@keyframes moveInLeft{
+
+0% {
+	opacity: 0;
+	transform: translateX(-100px);
+}
+80%{
+	transform: translateX(10px);
+	transform: rotate(180deg);
+
+}
+
+100%{
+	opacity: 1;
+	transform: translate(0);
+}
+}
+
+@keyframes moveInRight{
+
+0% {
+	opacity: 0;
+	transform: translateX(100px);
+}
+
+80%{
+	transform: translateX(10px);
+
+}
+
+100%{
+	opacity: 1;
+	transform: translate(0px);
+}
+}
+
+.btn:link,
+.btn:visited {
+text-transform: uppercase;
+font-size: 1.5rem;
+text-decoration: none;
+display: inline-block;
+margin-top: 5rem;
+padding: 20px 55px;
+border-radius: 10rem;
+transition: all .2s;
+}
+
+.btn:hover{
+transform: translateY(-3px);
+box-shadow: 0 5px 10px rgba(255, 255, 255, 1);
+}
+
+.btn:active{
+transform: translateY(-1px);
+box-shadow: 0 5px 10px rgb(255, 255, 255, 1);
+}
+
+.btn-white{
+background-color: #fff;
+color: #777;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FCAH&PT Incident Information and Reporting System</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" href="./css/img/melody.png" type="image/gif" sizes="16x16">
+	<a href="index.html" class="navbar-brand"><img src="./css/img/melody.png" style="width:100px;height:100px" alt="Logo" title="Logo"></a>
+</head>
+<body>
+	<div class="header">
+		<h2>REPORT A CASE</h2>
+	</div>
+	
+	<form method="post" action="userreportform.html">
+
+		<div class="input-group">
+			<label>Reporter Name</label>
+			<input type="text" name="ReporterName">
+		</div>
+		<div class="input-group">
+			<label>Incident Description</label>
+			<textarea id="description" name="description" rows="10" cols="55">
+			</textarea>
+		</div>
+        <div class="input-group">
+			<label>Location</label>
+			<input type="Location" name="Location">
+		</div>
+		<div class="input-group">
+			<label>Date Reported</label>
+			<input type="DateReported" name="DateReported">
+        </div>
+        <div class="input-group">
+			<label>Time Reported</label>
+			<input type="TimeReported" name="TimeReported">
+		</div>
+		<div class="input-group">
+			<label>Status</label>
+			<input type="status" name="status">
+		</div>
+		<div class="input-group">
+			<button type="submit" class="btn" name="userreportform">SUBMIT</button>
+		</div>
+	</form>
+</body>
+</html>
